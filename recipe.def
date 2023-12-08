@@ -1,0 +1,36 @@
+Bootstrap: docker
+From: pytorch/pytorch
+
+%files
+    run.sh .
+    requirements.txt .
+
+%environment
+    export PATH="$PATH:"
+
+%post
+    echo "Installing required packages..."
+    pip3 install -r requirements.txt
+    #python -c "from huggingface_hub.hf_api import HfFolder; HfFolder.save_token('')"
+    #set HF_TOKEN=''
+
+
+
+
+%runscript
+    echo "running main script" 
+    ./run.sh
+
+    
+%help
+    To run the container:
+	apptainer run <container_name.sif>
+
+    To shell into the container:
+	apptainer shell <container_name.sif>
+
+    To execute a custom command or app:
+	apptainer exec <container_name.sif> <command or app_name>
+
+    To view the container's metadata:
+	apptainer inspect <container_name.sif>

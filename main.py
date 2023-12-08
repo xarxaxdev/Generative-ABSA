@@ -350,7 +350,7 @@ if args.do_eval:
     print(f"F1 scores on test set: {test_results[best_step_metric]:.4f}")
 
     print("\n* Results *:  Dev  /  Test  \n")
-    metric_names = ['f1', 'precision', 'recall']
+    metric_names = ['f1', 'precision', 'recall','classification_report']
     for epoch in all_epochs:
         print(f"Epoch-{epoch}:")
         for name in metric_names:

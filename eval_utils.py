@@ -2,6 +2,7 @@
 
 import re
 import editdistance
+from sklearn.metrics import classification_report
 
 sentiment_word_list = ['positive', 'negative', 'neutral']
 aspect_cate_list = ['location general',
@@ -312,7 +313,11 @@ def compute_f1_scores(pred_pt, gold_pt):
     precision = float(n_tp) / float(n_pred) if n_pred != 0 else 0
     recall = float(n_tp) / float(n_gold) if n_gold != 0 else 0
     f1 = 2 * precision * recall / (precision + recall) if precision != 0 or recall != 0 else 0
-    scores = {'precision': precision, 'recall': recall, 'f1': f1}
+    scores = {
+        'precision': precision, 
+        'recall': recall, 'f1': f1,
+        'classification_report':classification_report(y_true=gold_pt, y_pred=pred_pt)
+        }
 
     return scores
 
