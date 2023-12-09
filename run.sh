@@ -2,7 +2,7 @@
 
 python main.py --task uabsa \
             --dataset laptop14 \
-            --model_name_or_path ./pretrained-models/t5-base \
+            --model_name_or_path ./t5-base \
             --paradigm annotation \
             --n_gpu 0 \
             --do_train \

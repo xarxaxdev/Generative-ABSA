@@ -1,0 +1,20 @@
+INFO:    underlay of /etc/localtime required more than 50 (68) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (206) bind mounts
+running main script
+/opt/conda/lib/python3.8/site-packages/scipy/__init__.py:143: UserWarning: A NumPy version >=1.19.5 and <1.27.0 is required for this version of SciPy (detected version 1.19.2)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+
+ ============================== NEW EXP: UABSA on laptop14 ============================== 
+
+Traceback (most recent call last):
+  File "main.py", line 250, in <module>
+    tokenizer = T5Tokenizer.from_pretrained(args.model_name_or_path)
+  File "/home/giliibueno/.local/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1763, in from_pretrained
+    resolved_vocab_files[file_id] = cached_file(
+  File "/home/giliibueno/.local/lib/python3.8/site-packages/transformers/utils/hub.py", line 409, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/giliibueno/.local/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 112, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/home/giliibueno/.local/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': './pretrained-models/t5-base'. Use `repo_type` argument if needed.

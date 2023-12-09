@@ -1,0 +1,23 @@
+INFO:    underlay of /etc/localtime required more than 50 (83) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (314) bind mounts
+running main script
+/home/containeruser/conda/lib/python3.7/site-packages/graphql/type/directives.py:55: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3,and in 3.9 it will stop working
+  assert isinstance(locations, collections.Iterable), 'Must provide locations for directive.'
+/home/containeruser/conda/lib/python3.7/site-packages/scipy/fft/__init__.py:97: DeprecationWarning: The module numpy.dual is deprecated.  Instead of using dual, use the functions directly from numpy or scipy.
+  from numpy.dual import register_func
+/home/containeruser/conda/lib/python3.7/site-packages/scipy/sparse/sputils.py:17: DeprecationWarning: `np.typeDict` is a deprecated alias for `np.sctypeDict`.
+  supported_dtypes = [np.typeDict[x] for x in supported_dtypes]
+/home/containeruser/conda/lib/python3.7/site-packages/scipy/special/orthogonal.py:81: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  from numpy import (exp, inf, pi, sqrt, floor, sin, cos, around, int,
+comet_ml is installed but `COMET_API_KEY` is not set.
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    from transformers import AdamW, T5ForConditionalGeneration, T5Tokenizer
+  File "/home/containeruser/conda/lib/python3.7/site-packages/transformers/__init__.py", line 626, in <module>
+    from .trainer import Trainer
+  File "/home/containeruser/conda/lib/python3.7/site-packages/transformers/trainer.py", line 69, in <module>
+    from .trainer_pt_utils import (
+  File "/home/containeruser/conda/lib/python3.7/site-packages/transformers/trainer_pt_utils.py", line 40, in <module>
+    from torch.optim.lr_scheduler import SAVE_STATE_WARNING
+ImportError: cannot import name 'SAVE_STATE_WARNING' from 'torch.optim.lr_scheduler' (/home/giliibueno/.local/lib/python3.7/site-packages/torch/optim/lr_scheduler.py)

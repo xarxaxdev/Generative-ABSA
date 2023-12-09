@@ -1,0 +1,4 @@
+INFO:    underlay of /etc/localtime required more than 50 (68) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (206) bind mounts
+running main script
+/.singularity.d/runscript: 4: /.singularity.d/runscript: ./run.sh: Permission denied

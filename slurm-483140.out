@@ -1,0 +1,32 @@
+INFO:    underlay of /etc/localtime required more than 50 (81) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (324) bind mounts
+running main script
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/horovod/torch/mpi_ops.py", line 31, in <module>
+    from horovod.torch import mpi_lib_v2 as mpi_lib
+ImportError: /root/miniconda3/envs/lightning/lib/python3.7/site-packages/horovod/torch/mpi_lib_v2.cpython-37m-x86_64-linux-gnu.so: undefined symbol: _ZTIN3c1021AutogradMetaInterfaceE
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "main.py", line 10, in <module>
+    import pytorch_lightning as pl
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/pytorch_lightning/__init__.py", line 55, in <module>
+    from pytorch_lightning.trainer import Trainer
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/pytorch_lightning/trainer/__init__.py", line 1035, in <module>
+    from pytorch_lightning.trainer.trainer import Trainer
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 19, in <module>
+    from pytorch_lightning.trainer.data_loading import TrainerDataLoadingMixin
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/pytorch_lightning/trainer/data_loading.py", line 37, in <module>
+    import horovod.torch as hvd
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/horovod/torch/__init__.py", line 35, in <module>
+    from horovod.torch import elastic
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/horovod/torch/elastic/__init__.py", line 17, in <module>
+    from horovod.torch.mpi_ops import init, shutdown
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/horovod/torch/mpi_ops.py", line 33, in <module>
+    check_installed_version('pytorch', torch.__version__, e)
+  File "/root/miniconda3/envs/lightning/lib/python3.7/site-packages/horovod/common/util.py", line 260, in check_installed_version
+    raise HorovodVersionMismatchError(name, version, installed_version) from exception
+horovod.common.exceptions.HorovodVersionMismatchError: Framework pytorch installed with version 1.4.0 but found version 1.13.1+cu117.
+             This can result in unexpected behavior including runtime errors.
+             Reinstall Horovod using `pip install --no-cache-dir` to build with the new version.

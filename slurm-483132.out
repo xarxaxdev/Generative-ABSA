@@ -1,0 +1,13 @@
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (501) bind mounts
+running main script
+comet_ml is installed but `COMET_API_KEY` is not set.
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    from transformers import AdamW, T5ForConditionalGeneration, T5Tokenizer
+  File "/usr/local/lib/python3.7/dist-packages/transformers/__init__.py", line 626, in <module>
+    from .trainer import Trainer
+  File "/usr/local/lib/python3.7/dist-packages/transformers/trainer.py", line 69, in <module>
+    from .trainer_pt_utils import (
+  File "/usr/local/lib/python3.7/dist-packages/transformers/trainer_pt_utils.py", line 40, in <module>
+    from torch.optim.lr_scheduler import SAVE_STATE_WARNING
+ImportError: cannot import name 'SAVE_STATE_WARNING' from 'torch.optim.lr_scheduler' (/home/giliibueno/.local/lib/python3.7/site-packages/torch/optim/lr_scheduler.py)

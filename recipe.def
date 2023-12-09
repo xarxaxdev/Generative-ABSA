@@ -1,16 +1,28 @@
 Bootstrap: docker
-From: pytorch/pytorch
+From:  pytorch/pytorch:1.7.1-cuda11.0-cudnn8-runtime
+#pytorchlightning/pytorch_lightning:0.8.1-py3.7-torch1.4
+#pytorchlightning/pytorch_lightning:base-conda-py3.7-torch1.4
+#pytorchlightning/pytorch_lightning:base-conda-py3.7-torch1.4
+#pytorchlightning/pytorch_lightning:base-cuda-py3.7-torch1.11-cuda11.3.1
+#pytorchlightning/pytorch_lightning:base-cuda-py3.9-torch1.13-cuda12.0.1
+#pytorchlightning/pytorch_lightning
+#pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
+#pytorch/pytorch:1.10.0-cuda11.3-cudnn8-runtime
+#python:alpine3.18
 
 %files
     run.sh .
-    requirements.txt .
+    requirement.txt .
 
 %environment
     export PATH="$PATH:"
 
 %post
     echo "Installing required packages..."
-    pip3 install -r requirements.txt
+    python -V
+    #apt-get update
+    #apt-get -y install pkg-config
+    pip  install --no-cache-dir -r requirement.txt 
     #python -c "from huggingface_hub.hf_api import HfFolder; HfFolder.save_token('')"
     #set HF_TOKEN=''
 
@@ -21,7 +33,7 @@ From: pytorch/pytorch
     echo "running main script" 
     ./run.sh
 
-    
+
 %help
     To run the container:
 	apptainer run <container_name.sif>

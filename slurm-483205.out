@@ -1,0 +1,14 @@
+INFO:    underlay of /etc/localtime required more than 50 (68) bind mounts
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (206) bind mounts
+running main script
+/opt/conda/lib/python3.8/site-packages/scipy/__init__.py:143: UserWarning: A NumPy version >=1.19.5 and <1.27.0 is required for this version of SciPy (detected version 1.19.2)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+
+ ============================== NEW EXP: UABSA on laptop14 ============================== 
+
+Traceback (most recent call last):
+  File "main.py", line 250, in <module>
+    tokenizer = T5Tokenizer.from_pretrained(args.model_name_or_path)
+  File "/home/giliibueno/.local/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1788, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load tokenizer for 't5-base'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 't5-base' is the correct path to a directory containing all relevant files for a T5Tokenizer tokenizer.
